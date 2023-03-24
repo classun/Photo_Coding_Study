@@ -1,0 +1,121 @@
+
+.myclass{   /* class를 선택하는 법 '. + 이름'을 사용 */
+    color: red;
+}
+
+#myid{  /* id를 선택하는 법 ' # + 이름'을 사용 */
+    color: blue;
+    background-color: black;
+}
+
+ /* 이서윤체 폰트 적용을 위한 코드 */
+@font-face {
+    font-family: "LeeSeoyun";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+    format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+#image1{
+    /* 이미지1~4가 커서 .photoframe에 
+       background-size: cover;로 사진을 알맞게 맞춤*/
+    /*경로 설정시 ' 사용해돋 되고 안해도 됨 */
+    background-image: url('./Photo/img1.png');
+}
+
+#image2{
+    background-image: url(./Photo/img2.png);
+}
+
+#image3{
+    background-image: url('./Photo/img3.png');
+}
+
+#image4{
+    
+    background-image: url(./Photo/img4.png);
+}
+/* body태그 자체에 css 요소 부여 */
+body {
+	font-family: "LeeSeoyun"; /*위에서 정의한 LeeSeoyun폰트를 사용*/
+	margin: 0;  /*바깥으로 영역을 남길것이냐*/
+    /* display와 justify-content 사용하여 폰트를 가운데로 정렬하게 만듬*/
+	display: flex; /*flex: 유연하게 사용*/
+	justify-content: center; 
+    /* 다른 폴더에 있을 시 폴더 경로에 들어가서 주소 가져오기 */
+    /* ★절대경로와 상대경로 학습하기★ 
+       출처: https://88240.tistory.com/122 */
+	background-image: url("./Photo/background.png");/*배경 이미지: 같은 폴더 안에 background.png를 가져오시오라는 뜻*/
+}
+
+.container{
+    width: 390px;  /*너비*/
+    background-color: plum;
+    height: 100%;   /*높이, 이렇게 %를 사용시 container를 둘러싸고 있는 body태그 높이만큼을 차지함 */
+}
+
+.photos{
+    /* margin: 영역을 띄어주기 위해서 사용 */
+    margin-top: 30px;   /*top: 위쪽 영역 띄어주기ㅣ*/
+}
+
+.photoframe{
+    background-color: white;
+    margin:15px 20px; /*세로 가로의 마진의 넓이를 정함*/
+    height: 200px; 
+    /* cover: 사진을 삽입했는데 이미지가 너무 크면 사용 */
+    background-size: cover;
+    position: relative;  
+    /* 커서를 손가락 모양으로 바꾼다 */
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+}
+
+.ftitle{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.photo_description{
+    color: white;
+    background-color: black;
+    
+    /* fit-content: 글자의 개수에 맞는 너비를 가져라 */
+    width: fit-content;
+    padding: 0 20px;    /*세로 가로 */
+    margin-bottom: 10px;
+
+    /* border-radius에서 border는 경계선을 말한다 */
+    border-radius: 10px;  /*경계선을 둘글게(radius)*/
+    position: absolute;
+    bottom: 0;
+
+    transform: translate(-50%);
+    left: 50%;
+
+    opacity: 0;
+}
+
+.video{
+    /* 동영상 너비,높이 맞추기 */
+    width: 100%;
+    height: 100%;
+}
+
+/* 글자를 보여줘라 클래스 */
+.showText{
+    /* opacity: 불투명함 */
+    opacity: 0;
+}
+
+/* 글자를 숨겨줘라 클래스 */
+.hideText{
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}

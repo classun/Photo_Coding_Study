@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoStudy</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.JS"></script>
+</head>
+<body>
+   <div class="container">
+        <div class="photos">
+            <div id="image1" class="photoframe"
+	        onmouseover="hideText(1)"
+	        onmouseout="showText(1)"
+	        onclick="alertText(1)"
+            >
+                <span id="desc1" class="photo_description">
+                    캐릭터 기본 이미지
+                </span>
+            </div>
+            <div id="image2" class="photoframe"
+            onmouseover="hideText(2)"
+	        onmouseout="showText(2)"
+	        onclick="alertText(2)"
+            >
+                <span id="desc2" class="photo_description">
+                    짜잔
+                </span>
+            </div>
+            <div id="image3" class="photoframe"
+            onmouseover="hideText(3)"
+	        onmouseout="showText(3)"
+	        onclick="alertText(3)">
+                <span id="desc3" class="photo_description">
+                    안녕😊
+                </span>
+            </div>
+            <div  class="photoframe">
+                <!-- 동영상 삽입  -->
+                <iframe
+		             src="https://www.youtube.com/embed/TWz1btekxfs"
+                     frameborder="0"
+                     class="video"
+	                 ></iframe>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="ftitle">Happy Lunch Time</p>
+            <p class="ftitle">2023.03.24</p>
+        </div>
+   </div>
+</body>
+</html>
